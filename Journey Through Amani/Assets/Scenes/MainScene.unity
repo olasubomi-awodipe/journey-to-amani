@@ -279,7 +279,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 1
-  m_BackGroundColor: {r: 0.47798735, g: 0.3562358, b: 0.3562358, a: 0}
+  m_BackGroundColor: {r: 0.49056602, g: 0.33389914, b: 0.27450982, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
@@ -399,7 +399,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fad869790da2f01489c7a68d36f318bc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 5
+  speed: 1
 --- !u!61 &1648268954
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -628,6 +628,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Unit001
       objectReference: {fileID: 0}
+    - target: {fileID: 6402928005565591731, guid: 999cf420db8f44b45a8fd186bced4156, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6402928005565591731, guid: 999cf420db8f44b45a8fd186bced4156, type: 3}
+      propertyPath: m_TagString
+      value: Player
+      objectReference: {fileID: 0}
     - target: {fileID: 8483016054553828894, guid: 999cf420db8f44b45a8fd186bced4156, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -661,6 +669,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8483016054553828894, guid: 999cf420db8f44b45a8fd186bced4156, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8483016054553828894, guid: 999cf420db8f44b45a8fd186bced4156, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
       objectReference: {fileID: 0}
@@ -690,11 +702,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8483016054553828894, guid: 999cf420db8f44b45a8fd186bced4156, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -0.07
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8483016054553828894, guid: 999cf420db8f44b45a8fd186bced4156, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 1.38
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8483016054553828894, guid: 999cf420db8f44b45a8fd186bced4156, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
