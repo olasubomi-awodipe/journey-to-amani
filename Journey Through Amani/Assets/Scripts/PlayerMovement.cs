@@ -8,6 +8,8 @@ public class PlayerMovement : MonoBehaviour
     public float speed = 2f;
     private bool facingLeft = true;
 
+    public BraceletManager bm;
+
     private void Awake()
     {
         rb = gameObject.GetComponent<Rigidbody2D>();
@@ -49,5 +51,14 @@ public class PlayerMovement : MonoBehaviour
         gameObject.transform.localScale = currentScale;
 
         facingLeft = !facingLeft;
+    }
+
+    void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.gameObject.CompareTag("Bracelet"))
+        {
+            Destroy(other.gameObject);
+            bm.braceletCount++;
+        }
     }
 }
