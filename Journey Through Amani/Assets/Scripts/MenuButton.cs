@@ -9,7 +9,8 @@ public class MenuButton : MonoBehaviour
     [SerializeField] AnimatorFunctions animatorFunctions;
     [SerializeField] int thisIndex;
 
-    
+   
+
     void Update()
     {
         if (menuButtonController.index == thisIndex)
