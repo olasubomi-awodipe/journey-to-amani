@@ -11,12 +11,13 @@ public class NPC : MonoBehaviour
     public string[] dialogue;
     public Image dialogueImage;
     public Sprite npcImage;
-    public float wordSpeed = 0.05f;
-    public bool playerIsClose;
-    public GameObject continueButton;
+    public TMP_Text npcNameText;
     public GameObject interactionPrompt;
 
     private int index;
+    public float wordSpeed = 0.05f;
+    public bool playerIsClose;
+    public GameObject continueButton;
 
     void Start()
     {
@@ -47,11 +48,15 @@ public class NPC : MonoBehaviour
                     dialogueImage.sprite = npcImage;
                     dialogueImage.gameObject.SetActive(true);
                 }
+                if (npcNameText != null)
+                {
+                    npcNameText.text = gameObject.name; // Assign NPC's name to text component
+                }
                 StartCoroutine(Typing());
             }
         }
 
-        if (dialogueText != null && dialogueText.text == dialogue[index])
+        if (dialogueText != null && dialogue != null && index < dialogue.Length && dialogueText.text == dialogue[index])
         {
             if (continueButton != null)
             {
@@ -79,7 +84,7 @@ public class NPC : MonoBehaviour
 
     IEnumerator Typing()
     {
-        if (dialogueText != null)
+        if (dialogueText != null && dialogue != null && index < dialogue.Length)
         {
             dialogueText.text = "";  // Clear previous text before starting
             foreach (char letter in dialogue[index].ToCharArray())
